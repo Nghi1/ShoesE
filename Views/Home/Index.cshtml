@@ -1,4 +1,13 @@
 ﻿<!-- /girds_bottom-->
+@using ShoesE.Models;
+@model IEnumerable<Sanpham>
+@foreach (Sanpham sanphams in Model)
+{
+    <tr>
+        <td>@sanphams.MaSanPham</td>
+        <td>@sanphams.TenSanPham</td>
+    </tr>
+}
 <div class="grids_bottom">
     <div class="style-grids">
         <div class="col-md-6 style-grid style-grid-1">
@@ -27,7 +36,7 @@
     </div>
     <div class="clearfix"></div>
 </div>
-	</div>
+
 <!-- //grids_bottom-->
 <!-- /girds_bottom2-->
 <div class="grids_sec_2">
@@ -294,4 +303,3 @@
         <p class="copy-right-w3ls-agileits">&copy 2018 Downy Shoes. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>
     </div>
 </div>
-	</div>

@@ -7,20 +7,28 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
+using Microsoft.Extensions.Configuration;
+using System.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
+
 namespace ShoesE.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        private DBCT Context { get; }
+        public HomeController(ILogger<HomeController> logger, DBCT _context)
         {
             _logger = logger;
+            this.Context = _context;
         }
-
+     
         public IActionResult Index()
         {
-            return View();
+            List<Sanpham> sanphams = (from Sanpham in this.Context.SANPHAM.Take(10)
+                                        select Sanpham).ToList();
+            return View(sanphams);
         }
 
         public IActionResult Privacy()

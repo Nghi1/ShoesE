@@ -9,6 +9,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
+using Microsoft.EntityFrameworkCore;
+
 namespace ShoesE
 {
     public class Startup
@@ -23,7 +25,8 @@ namespace ShoesE
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllersWithViews().AddRazorRuntimeCompilation();
+            services.AddDbContext<DBCT>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnectionString")));
+            services.AddControllersWithViews().AddRazorRuntimeCompilation();   
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
