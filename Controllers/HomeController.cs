@@ -32,7 +32,9 @@ namespace ShoesE.Controllers
         }
         public IActionResult Shopnow()
         {
-            return View();
+            List<Sanpham> sanphams = (from Sanpham in this.Context.SANPHAM.Take(10)
+                                      select Sanpham).ToList();
+            return View(sanphams);
         }
 
         public IActionResult Privacy()
