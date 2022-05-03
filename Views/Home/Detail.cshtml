@@ -6,14 +6,14 @@
                     <div class="flexslider">
 
                         <ul class="slides">
-                            <li data-thumb="../images/d2.jpg">
-                                <div class="thumb-image"> <img src="~/images/d2.jpg" data-imagezoom="true" class="img-responsive"> </div>
+                            <li data-thumb="@ViewBag.SanPham.AnhbiaCT">
+                                <div class="thumb-image"> <img src="@ViewBag.SanPham.Anhbia" data-imagezoom="true" class="img-responsive"> </div>
                             </li>
-                            <li data-thumb="../images/d1.jpg">
-                                <div class="thumb-image"> <img src="~/images/d1.jpg" data-imagezoom="true" class="img-responsive"> </div>
+                            <li data-thumb="@ViewBag.SanPham.Anhbia">
+                                <div class="thumb-image"> <img src="@ViewBag.SanPham.AnhbiaCT" data-imagezoom="true" class="img-responsive"> </div>
                             </li>
-                            <li data-thumb="../images/d3.jpg">
-                                <div class="thumb-image"> <img src="~/images/d3.jpg" data-imagezoom="true" class="img-responsive"> </div>
+                            <li data-thumb="@ViewBag.SanPham.AnhbiaCT">
+                                <div class="thumb-image"> <img src="@ViewBag.SanPham.Anhbia" data-imagezoom="true" class="img-responsive"> </div>
                             </li>
                         </ul>
                         <div class="clearfix"></div>
@@ -21,10 +21,10 @@
                 </div>
             </div>
             <div class="col-md-8 single-right-left simpleCart_shelfItem">
-                <h3>Shoe Rock Vision(SRV) Sneakers (Blue)</h3>
+                <h3>@ViewBag.SanPham.TenSanPham</h3>
                 <p>
-                    <span class="item_price">$650</span>
-                    <del>$1,199</del>
+                    <span class="item_price">@String.Format("{0:#,,.##} Triệu", ViewBag.SanPham.Giaban) đ</span>
+                    <del>@String.Format("{0:#,,.##} Triệu", ViewBag.SanPham.Giaban) đ</del>
                 </p>
                 <div class="rating1">
                     <ul class="stars">

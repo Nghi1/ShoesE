@@ -36,8 +36,11 @@ namespace ShoesE.Controllers
                                       select Sanpham).ToList();
             return View(sanphams);
         }
-        public IActionResult Detail()
+        public IActionResult Detail(int id)
         {
+            var sanphams1 = (from Sanpham in this.Context.SANPHAM.Take(10)
+                                      select Sanpham).Where(sp=>sp.MaSanPham==id).FirstOrDefault();
+            ViewBag.SanPham = sanphams1;
             return View();
         }
         public IActionResult Privacy()
