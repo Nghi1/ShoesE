@@ -36,7 +36,10 @@ namespace ShoesE.Controllers
                                       select Sanpham).ToList();
             return View(sanphams);
         }
-
+        public IActionResult Detail()
+        {
+            return View();
+        }
         public IActionResult Privacy()
         {
             return View();
