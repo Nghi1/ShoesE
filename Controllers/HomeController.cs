@@ -43,6 +43,10 @@ namespace ShoesE.Controllers
             ViewBag.SanPham = sanphams1;
             return View();
         }
+        public IActionResult Checkout()
+        {
+            return View();
+        }
         public IActionResult Privacy()
         {
             return View();
