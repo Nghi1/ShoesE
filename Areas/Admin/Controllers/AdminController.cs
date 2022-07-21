@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ShoesE.Areas.Admin.Controllers
 {
-    public class HomeController : Controller
+    public class AdminController : Controller
     {
         [Area("Admin")]
         public IActionResult Index()
