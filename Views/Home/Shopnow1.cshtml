@@ -209,29 +209,29 @@
                 <!-- product-sec1 -->
                 <div class="product-sec1">
                     <!--/mens-->
-                    @foreach (Sanpham sanphams in Model)
-                    { 
-                       <div class="col-md-4 product-men">
+                    @foreach (Sanpham sanphams1 in Model)
+                    {
+                        <div class="col-md-4 product-men">
                             <div class="product-shoe-info shoe">
                                 <div class="men-pro-item">
                                     <div class="men-thumb-item">
-                                        <img src="@sanphams.Anhbia" alt="">
+                                        <img src="@sanphams1.Anhbia" alt="">
                                         <div class="men-cart-pro">
                                             <div class="inner-men-cart-pro">
-                                                <a href="@Url.Action("Detail","Home", new { id = sanphams.MaSanPham })" class="link-product-add-cart">Quick View</a>
+                                                <a href="@Url.Action("Detail","Home", new { id = sanphams1.MaSanPham })" class="link-product-add-cart">Quick View</a>
                                             </div>
                                         </div>
                                         <span class="product-new-top">New</span>
                                     </div>
                                     <div class="item-info-product">
                                         <h4>
-                                            <a href="@Url.Action("Detail","Home", new { id = sanphams.MaSanPham })">@sanphams.TenSanPham</a>
+                                            <a href="@Url.Action("Detail","Home", new { id = sanphams1.MaSanPham })">@sanphams1.TenSanPham</a>
                                         </h4>
                                         <div class="info-product-price">
                                             <div class="grid_meta">
                                                 <div class="product_price">
                                                     <div class="grid-price ">
-                                                        <span class="money ">@String.Format("{0:#,,.##} Triệu", sanphams.Giaban) đ</span>
+                                                        <span class="money ">@String.Format("{0:#,,.##} Triệu", sanphams1.Giaban) đ</span>
                                                     </div>
                                                 </div>
                                                 <ul class="stars">
@@ -261,14 +261,14 @@
                             </div>
                         </div>
                     }
-                <div id="nextP">
-                    <a href="#">1</a>
-                    <a href="@Url.Action("Shopnow1","Home")">2</a>
-                </div>
-                        <!-- //mens -->
-                        <div class="clearfix"></div>
-
+                    <div id="nextP">
+                        <a href="#">1</a>
+                        <a href="#">2</a>
                     </div>
+                    <!-- //mens -->
+                    <div class="clearfix"></div>
+
+                </div>
 
                 <!-- //product-sec1 -->
                 <div class="col-md-6 shop_left shp">

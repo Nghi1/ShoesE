@@ -33,8 +33,14 @@ namespace ShoesE.Controllers
         public IActionResult Shopnow()
         {
             List<Sanpham> sanphams = (from Sanpham in this.Context.SANPHAM.Take(10)
-                                      select Sanpham).ToList();
+                                      select Sanpham).Where(sp=>sp.MaSanPham>=5).ToList();
             return View(sanphams);
+        }
+        public IActionResult Shopnow1()
+        {
+            List<Sanpham> sanphams1 = (from Sanpham in this.Context.SANPHAM.Take(10)
+                                      select Sanpham).Where(sp => sp.MaSanPham < 5).ToList();
+            return View(sanphams1);
         }
         public IActionResult Detail(int id)
         {
